@@ -2,7 +2,7 @@
 
 // 1) Create a basic calculator with the only Add and Subtract functionality.
 
-
+<?php
 class calculator{                                               
 
    public $a,$b,$c;
@@ -106,44 +106,46 @@ $obj->div();
 
 //4 . Create a complete calculator with Add, Subtract, Multiply, and Divide functionality using the inheritance.
 
-class additions{
+<?php
+class addition{
     public $a,$b,$c;
     function __construct($a,$b){
         $this->a=$a;
         $this->b=$b;
     }
-function info(){
+function add(){
     $this->c = $this->a + $this->b;
-    echo 'addition of number= '. $this->c . "\n";
+    echo 'addition of number= '. $this->c . "<br>";
 }
         
     }
-class subtraction extends additions{
-    function info(){
+class subtraction extends addition{
+    function sub(){
     $this->c = $this->a - $this->b;
-    echo 'subtractions of number= ' . $this->c  . "\n";
+    echo 'subtractions of number= ' . $this->c  . "<br>";
     
 }
 }
 class multiplation extends subtraction{
-     function info(){
+     function mul(){
     $this->c = $this->a * $this->b;
-    echo 'multiplations of number= '. $this->c . "\n";
+    echo 'multiplations of number= '. $this->c . "<br>";
      }
 }
-class divisio extends multiplation{
-     function info(){
+class division extends multiplation{
+     function div(){
     $this->c = $this->a / $this->b;
     echo 'multiplations of number= '. $this->c;
      }
 }
     
 
-$d1=new divisio(12,10);
-$a1->info();
-$s1->info();
-$m1->info();
-$d1->info();
+$d1=new division(12,10);
+$d1->add();
+$d1->sub();
+$d1->mul();
+$d1->div();
+
 
 
 
@@ -171,17 +173,17 @@ interface divsions{
 
 class calculato implements aditions,subtractions,multiplications,divsions{
 	public function add($a,$b){
-    	echo $a + $b . "\n";
+    	echo $a + $b . "<br>";
 	}
     
 
 	public function sub($a,$b){
-            	echo  $a - $b . "\n";
+            	echo  $a - $b . "<br>";
 
 	}
 
 	public function mul($a,$b){
-            	echo 'the multiplication is = '. $a * $b ."\n";
+            	echo 'the multiplication is = '. $a * $b ."<br>";
 
 	}
 
