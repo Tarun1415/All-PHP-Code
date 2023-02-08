@@ -138,9 +138,7 @@ class divisio extends multiplation{
      }
 }
     
-$a1=new additions(12,12);
-$s1=new subtraction(12,10);
-$m1=new multiplation(12,10);
+
 $d1=new divisio(12,10);
 $a1->info();
 $s1->info();
